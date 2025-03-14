@@ -1,25 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found</title>
+    <title> 404 Not Found</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
             text-align: center;
-            padding: 50px;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
         }
-        h1 {
-            font-size: 50px;
+
+        .error-code {
+            font-size: 15rem;
+            font-weight: bold;
+            text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: -1rem;
+            animation: float 3s ease-in-out infinite;
         }
-        p {
-            font-size: 20px;
+
+        .message {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .action-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            font-weight: 500;
+        }
+
+        .action-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: bubble 10s linear infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes bubble {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(-100vh) scale(1);
+                opacity: 0.3;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 10rem;
+            }
+            .message {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>404</h1>
-    <p>The page you are looking for does not exist.</p>
+    <!-- 背景气泡动画 -->
+    <div class="bubble" style="left: 10%; width: 40px; height: 40px; animation-delay: 0s"></div>
+    <div class="bubble" style="left: 30%; width: 60px; height: 60px; animation-delay: 2s"></div>
+    <div class="bubble" style="left: 60%; width: 30px; height: 30px; animation-delay: 5s"></div>
+    <div class="bubble" style="left: 85%; width: 50px; height: 50px; animation-delay: 3s"></div>
+
+    <div class="container">
+        <div class="error-code">404</div>
+        <p class="message">哎呀！您访问的页面好像去火星旅行了...</p>
+   
+        <p style="margin-top: 1.5rem; opacity: 0.8; font-size: 0.9rem;">
+            检查您输入的URL是否正确
+        </p>
+    </div>
 </body>
 </html>
