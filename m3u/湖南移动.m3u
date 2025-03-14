@@ -1,6 +1,6 @@
 #EXTM3U x-tvg-url="https://diyp0731.112114.xyz/pp.xml.gz" catchup="append" catchup-source="?starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"
 
-#湖南移动内网源，仅限湖南移动网络使用。
+#湖南移动内网源 + itv湖南移动域名版，仅限湖南移动网络使用。
 
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://live.935181.xyz/LOGO/CCTV1.png" group-title="央视频道",CCTV1
 http://tvgslb.hn.chinamobile.com:8089/180000001002/00000001000000000007000000001243/main.m3u8$hnyd
@@ -79,7 +79,7 @@ http://tvgslb.hn.chinamobile.com:8089/180000001002/00000001000000000091000000244
 #EXTINF:-1 tvg-id="央视台球" tvg-name="央视台球" tvg-logo="https://live.935181.xyz/LOGO/央视台球.png" group-title="央视频道",央视台球
 http://tvgslb.hn.chinamobile.com:8089/180000001002/00000001000000000091000000244803/main.m3u8$hnyd
 #EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://live.935181.xyz/LOGO/湖南卫视.png" group-title="卫视频道",湖南卫视
-http://tvgslb.hn.chinamobile.com:8089/180000001001/00000001000000000064000000308827/main.m3u8$hnyd
+http://tvgslb.hn.chinamobile.com:8089/180000001001/00000001000000000064000000308827/main.m3u8$hnyd-20M
 http://tvgslb.hn.chinamobile.com:8089/180000001002/00000001000000000010000000040382/main.m3u8$hnyd
 #EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://live.935181.xyz/LOGO/江苏卫视.png" group-title="卫视频道",江苏卫视
 http://tvgslb.hn.chinamobile.com:8089/180000001002/00000001000000000007000000001244/main.m3u8$hnyd
@@ -465,7 +465,7 @@ http://39.134.240.2/PLTV/2/224/3221225809/index.m3u8
 
 
 
-#itv 部分地区不能使用域名直接观看，需要改用ip ，如：http://183.215.116.144:6610
+#itv 湖南移动部分地区不能使用域名直接观看，需要改用ip ，如：http://183.215.116.144:6610
 
 #EXTINF:-1,tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://live.935181.xyz/LOGO/CCTV1.png" group-title="央视频道",CCTV1
 http://tvgslb.hn.chinamobile.com:8089/000000001000//1000000005000265001/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265001&livemode=1&stbId=lzz123$ysten 6M FHD HEVC
